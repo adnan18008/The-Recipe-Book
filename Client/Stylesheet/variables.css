@@ -1,0 +1,30 @@
+:root {
+    /* Color Palette */
+    --primary-color: #ff6b6b;
+    --primary-dark: #e05555;
+    --secondary-color: #4ecdc4;
+    --accent-color: #ffe66d;
+    --text-dark: #2d3436;
+    --text-light: #f7f7f7;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    
+    /* Gradients */
+    --gradient-bg: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    --gradient-btn: linear-gradient(45deg, #ff6b6b, #ff8e53);
+
+    /* Fonts */
+    --font-main: 'Poppins', sans-serif;
+    
+    /* Spacing & Radius */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 30px;
+}
+
+body {
+    background: var(--gradient-bg);
+    color: var(--text-light);
+    font-family: var(--font-main);
+}

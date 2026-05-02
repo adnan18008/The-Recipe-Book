@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Recipe Book</title>
+    <link rel="stylesheet" href="../Stylesheet/variables.css">
+    <link rel="stylesheet" href="../Stylesheet/Login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <main class="auth-shell">
+        <section class="auth-panel">
+            <a class="brand" href="/">
+                <img src="../Public/Logo-Recipe-Book.png" alt="RecipeBook logo">
+                <span>RecipeBook</span>
+            </a>
+            <h1>Cook smarter, save faster.</h1>
+            <p>Sign in to open your recipe dashboard, meal plan ideas, favorites, and kitchen notes.</p>
+            <div class="auth-highlights">
+                <span><i class='bx bx-check-shield'></i> Hashed passwords</span>
+                <span><i class='bx bx-cookie'></i> Secure session</span>
+                <span><i class='bx bx-dish'></i> Creative dashboard</span>
+            </div>
+        </section>
+
+    <div class="wrapper">
+        <form action="/login" method="post">
+            <h1>Welcome Back</h1>
+            <% if (typeof error !== 'undefined' && error) { %>
+                <p class="form-alert"><%= error %></p>
+            <% } %>
+            <div class="input-box">
+                <input type="text" name="username" placeholder="Username" required autocomplete="username">
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" name="password" placeholder="Password" required autocomplete="current-password">
+                <i class='bx bxs-lock-alt'></i>            
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox" name="remember">Remember me</label>
+                <a href="/register">Create account</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="register-link">
+                <p>New here? <a href="/register">Create an account</a></p>
+            </div>
+        </form>
+    </div>
+    </main>
+</body>
+</html>

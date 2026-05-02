@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Registration | Recipe Book</title>
+  <link rel="stylesheet" href="../Stylesheet/variables.css">
+  <link rel="stylesheet" href="../Stylesheet/register.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <main class="auth-layout">
+  <section class="auth-copy">
+    <a class="brand" href="/">
+      <img src="../Public/Logo-Recipe-Book.png" alt="RecipeBook logo">
+      <span>RecipeBook</span>
+    </a>
+    <h1>Build your personal kitchen command center.</h1>
+    <p>Create a profile and jump straight into a dashboard with recipe search, favorites, meal ideas, and planning tools.</p>
+  </section>
+  <div class="container">
+    <div class="title">Create Account</div>
+    <div class="content">
+      <form action="/register" method="post">
+        <% if (typeof error !== 'undefined' && error) { %>
+          <p class="form-alert"><%= error %></p>
+        <% } %>
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" name="name" placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" name="username" placeholder="Enter your username" autocomplete="username" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="tel" name="phone" placeholder="Enter your number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" name="password" placeholder="Minimum 8 characters" autocomplete="new-password" required minlength="8">
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" name="confirmPassword" placeholder="Confirm your password" autocomplete="new-password" required minlength="8">
+          </div>
+        </div>
+        <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1" value="Male">
+          <input type="radio" name="gender" id="dot-2" value="Female">
+          <input type="radio" name="gender" id="dot-3" value="Other">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+              <span class="dot one"></span>
+              <span class="gender">Male</span>
+            </label>
+            <label for="dot-2">
+              <span class="dot two"></span>
+              <span class="gender">Female</span>
+            </label>
+            <label for="dot-3">
+              <span class="dot three"></span>
+              <span class="gender">Other</span>
+            </label>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+        <div class="login-link">
+          <p>Already have an account? <a href="/">Login</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+node_modules/
+.tools/
+.env
+npm-debug.log*
+Desktop.ini
+.DS_Store

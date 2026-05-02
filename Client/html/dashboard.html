@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | RecipeBook</title>
+  <link rel="stylesheet" href="../Stylesheet/variables.css">
+  <link rel="stylesheet" href="../Stylesheet/dashboard.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script defer src="../js/dashboard.js"></script>
+</head>
+
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="/dashboard">
+        <img src="../Public/Logo-Recipe-Book.png" alt="RecipeBook logo">
+        <span>RecipeBook</span>
+      </a>
+      <nav class="side-nav" aria-label="Dashboard">
+        <a class="active" href="#overview"><i class='bx bx-grid-alt'></i><span>Overview</span></a>
+        <a href="#recipes"><i class='bx bx-book-open'></i><span>Recipes</span></a>
+        <a href="#planner"><i class='bx bx-calendar'></i><span>Planner</span></a>
+        <a href="#favorites"><i class='bx bx-heart'></i><span>Favorites</span></a>
+      </nav>
+      <form action="/logout" method="post">
+        <button class="ghost-btn" type="submit"><i class='bx bx-log-out'></i><span>Logout</span></button>
+      </form>
+    </aside>
+
+    <main class="dashboard">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Welcome back</p>
+          <h1><%= user.name %>'s Kitchen Dashboard</h1>
+        </div>
+        <div class="top-actions">
+          <button class="icon-btn" id="themeToggle" type="button" title="Toggle theme"><i class='bx bx-moon'></i></button>
+          <button class="primary-btn" id="surpriseRecipe" type="button"><i class='bx bx-sparkles'></i><span>Surprise me</span></button>
+        </div>
+      </header>
+
+      <section class="hero-panel" id="overview">
+        <div class="hero-copy">
+          <p class="eyebrow">Recipe of the day</p>
+          <h2 id="featuredTitle">Masala Dosa</h2>
+          <p id="featuredMeta">Crispy, comforting, and ready for your weekend brunch board.</p>
+          <div class="hero-actions">
+            <a id="featuredLink" class="primary-btn" href="/html/dosa.html"><i class='bx bx-right-arrow-alt'></i><span>Open recipe</span></a>
+            <button class="secondary-btn" id="addFeatured" type="button"><i class='bx bx-heart'></i><span>Save</span></button>
+          </div>
+          <div class="hero-stats">
+            <span><strong>8</strong> curated dishes</span>
+            <span><strong>4</strong> meal slots</span>
+            <span><strong>1</strong> smart pantry</span>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img id="featuredImage" src="../Public/Dosaimg.jpg" alt="Featured recipe">
+        </div>
+      </section>
+
+      <section class="metrics" aria-label="Recipe stats">
+        <article><span>Recipes</span><strong id="recipeCount">8</strong></article>
+        <article><span>Favorites</span><strong id="favoriteCount">0</strong></article>
+        <article><span>Avg. time</span><strong>34m</strong></article>
+        <article><span>Skill level</span><strong>Home Pro</strong></article>
+      </section>
+
+      <section class="toolbar" id="recipes">
+        <div class="search-wrap">
+          <i class='bx bx-search'></i>
+          <input id="recipeSearch" type="search" placeholder="Search recipes, cuisines, or mood">
+        </div>
+        <div class="filter-pills" role="group" aria-label="Recipe filters">
+          <button class="filter active" data-filter="all" type="button">All</button>
+          <button class="filter" data-filter="veg" type="button">Veg</button>
+          <button class="filter" data-filter="nonveg" type="button">Non-veg</button>
+          <button class="filter" data-filter="sweet" type="button">Sweet</button>
+          <button class="filter" data-filter="quick" type="button">Quick</button>
+        </div>
+        <button class="secondary-btn clear-btn" id="clearSearch" type="button"><i class='bx bx-x'></i><span>Clear</span></button>
+      </section>
+
+      <section class="content-grid">
+        <section class="recipe-section">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Cookbook</p>
+              <h2>Popular Recipes</h2>
+            </div>
+            <span>Search, save, and jump into cooking.</span>
+          </div>
+          <div class="recipe-board" id="recipeBoard" aria-live="polite"></div>
+        </section>
+
+        <aside class="utility-panel">
+          <section class="pantry-panel">
+            <h2>Pantry Match</h2>
+            <div class="pantry-board" id="pantryBoard"></div>
+            <div class="pantry-result" id="pantryResult"></div>
+          </section>
+
+          <section id="planner">
+            <div class="panel-heading">
+              <h2>Meal Planner</h2>
+              <button class="icon-btn" id="shufflePlan" type="button" title="Shuffle plan"><i class='bx bx-refresh'></i></button>
+            </div>
+            <ul class="meal-plan" id="mealPlan"></ul>
+          </section>
+
+          <section class="notes-panel">
+            <h2>Kitchen Notes</h2>
+            <textarea id="kitchenNotes" rows="6" placeholder="Add shopping reminders, prep notes, or family tweaks."></textarea>
+          </section>
+
+          <section id="favorites">
+            <h2>Saved Favorites</h2>
+            <div class="favorite-list" id="favoriteList"></div>
+          </section>
+        </aside>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

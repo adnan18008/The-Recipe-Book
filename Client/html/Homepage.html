@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home | RecipeBook</title>
+	<link rel="stylesheet" href="../Stylesheet/variables.css">
+	<link rel="stylesheet" href="../Stylesheet/Homepage.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<script src="https://kit.fontawesome.com/1c28ce0176.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+	<!-- HEADER -->
+	<header>
+		<a href="#" class="logo-container">
+			<img src="../Public/Logo-Recipe-Book.png" alt="RecipeBook Logo">
+			<h2>RecipeBook</h2>
+		</a>
+
+		<nav>
+			<ul>
+				<li><a href="#" class="active">Home</a></li>
+				<li class="dropdown-container">
+					<a href="#">Recipes <i class='bx bx-chevron-down'></i></a>
+					<ul class="dropdown">
+						<li><a href="#">Veg</a></li>
+						<li><a href="#">Non-Veg</a></li>
+						<li><a href="#">Sweet</a></li>
+						<li><a href="#">Spicy</a></li>
+					</ul>
+				</li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="#">About</a></li>
+				<li><input type="text" class="search-box" placeholder="Search..."></li>
+				<li><a href="Login.html"
+						style="color: var(--secondary-color); border: 1px solid var(--secondary-color); padding: 5px 15px; border-radius: 20px;">Log
+						In</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- HERO / SLIDER -->
+	<section class="hero">
+		<div class="slider-container">
+			<!-- Slide 1 -->
+			<div class="slide active">
+				<img src="../Public/Dosaimg.jpg" alt="Dosa">
+				<div class="slide-content">
+					<h2>Crispy Dosa</h2>
+					<a href="dosa.html"><button class="btn-explore">View Recipe</button></a>
+				</div>
+			</div>
+			<!-- Slide 2 -->
+			<div class="slide">
+				<img src="../Public/burger2.jpg" alt="Burger">
+				<div class="slide-content">
+					<h2>Classic Burger</h2>
+					<a href="Burger.html"><button class="btn-explore">View Recipe</button></a>
+				</div>
+			</div>
+			<!-- Slide 3 -->
+			<div class="slide">
+				<img src="../Public/butter-chicken-png.jpg" alt="Butter Chicken">
+				<div class="slide-content">
+					<h2>Butter Chicken</h2>
+					<a href="butterchicken.html"><button class="btn-explore">View Recipe</button></a>
+				</div>
+			</div>
+			<!-- Slide 4 -->
+			<div class="slide">
+				<img src="../Public/Aloo paratha.jpg" alt="Aloo Paratha">
+				<div class="slide-content">
+					<h2>Aloo Paratha</h2>
+					<a href="alooparatha.html"><button class="btn-explore">View Recipe</button></a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- RECIPE GRID -->
+	<section class="recipes-section">
+		<h2 class="section-title">Popular Recipes</h2>
+		<div class="recipe-grid">
+			<a href="Burger.html" class="recipe-card">
+				<img src="../Public/burger.jpg" alt="Burger" class="recipe-image">
+				<div class="recipe-info">
+					<h3>Burger</h3>
+				</div>
+			</a>
+			<a href="ghewar.html" class="recipe-card">
+				<img src="../Public/ghewar.jpg" alt="Ghewar" class="recipe-image">
+				<div class="recipe-info">
+					<h3>Ghewar</h3>
+				</div>
+			</a>
+			<a href="Halwa.html" class="recipe-card">
+				<img src="../Public/Halwa.jpg" alt="Halwa" class="recipe-image">
+				<div class="recipe-info">
+					<h3>Halwa</h3>
+				</div>
+			</a>
+			<a href="alooparatha.html" class="recipe-card">
+				<img src="../Public/Aloo paratha.jpg" alt="Aloo Paratha" class="recipe-image">
+				<div class="recipe-info">
+					<h3>Aloo Paratha</h3>
+				</div>
+			</a>
+			<a href="butterchicken.html" class="recipe-card">
+				<img src="../Public/butter-chicken-png.jpg" alt="Butter Chicken" class="recipe-image">
+				<div class="recipe-info">
+					<h3>Butter Chicken</h3>
+				</div>
+			</a>
+			<a href="biryani.html" class="recipe-card">
+				<img src="../Public/Biryani.png" alt="Biryani" class="recipe-image">
+				<div class="recipe-info">
+					<h3>Biryani</h3>
+				</div>
+			</a>
+			<a href="garlicbread.html" class="recipe-card">
+				<img src="../Public/Garlic-Bread.png" alt="Garlic Bread" class="recipe-image">
+				<div class="recipe-info">
+					<h3>Garlic Bread</h3>
+				</div>
+			</a>
+			<a href="dosa.html" class="recipe-card">
+				<img src="../Public/Dosa.png" alt="Dosa" class="recipe-image">
+				<div class="recipe-info">
+					<h3>Dosa</h3>
+				</div>
+			</a>
+		</div>
+	</section>
+
+	<!-- FOOTER -->
+	<footer>
+		<div class="footer-info">
+			<h3>Contact Us</h3>
+			<p><i class='bx bx-envelope'></i> info@recipebook.com</p>
+			<p><i class='bx bx-phone'></i> +1 (123) 456-7890</p>
+			<p><i class='bx bx-map'></i> 123 Food Street, Tasty City</p>
+			<div style="margin-top: 20px; font-size: 24px;">
+				<a href="#" style="color: var(--text-light); margin: 0 10px;"><i class='bx bxl-youtube'></i></a>
+				<a href="#" style="color: var(--text-light); margin: 0 10px;"><i class='bx bxl-instagram'></i></a>
+				<a href="#" style="color: var(--text-light); margin: 0 10px;"><i class='bx bxl-facebook'></i></a>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Simple Script for Slider Auto-play -->
+	<script>
+		let index = 0;
+		const slides = document.querySelectorAll('.slide');
+
+		function showSlide() {
+			slides.forEach((slide, i) => {
+				slide.classList.remove('active');
+				if (i === index) slide.classList.add('active');
+			});
+			index++;
+			if (index >= slides.length) index = 0;
+			setTimeout(showSlide, 3000); // Change image every 3 seconds
+		}
+
+		showSlide();
+	</script>
+</body>
+
+</html>
