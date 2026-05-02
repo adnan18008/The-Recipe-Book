@@ -3,12 +3,27 @@
   "version": "1.0.0",
   "description": "A professional recipe dashboard with secure authentication and interactive planning tools.",
   "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adnan18008/The-Recipe-Book.git"
+  },
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
-  "author": "",
+  "keywords": [
+    "recipe-book",
+    "express",
+    "mongodb",
+    "dashboard",
+    "authentication"
+  ],
+  "author": "Mohd Adnan",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adnan18008/The-Recipe-Book/issues"
+  },
+  "homepage": "https://github.com/adnan18008/The-Recipe-Book#readme",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "ejs": "^3.1.9",
